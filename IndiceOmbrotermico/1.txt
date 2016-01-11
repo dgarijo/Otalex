@@ -1,0 +1,14 @@
+@prefix otalex: <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+DELETE{
+	?resource rdfs:label '1'
+}
+INSERT {
+	?resource rdfs:label 'Seco superior.'@es.
+	?resource rdfs:label 'Seco superior.'@pt
+}
+WHERE{
+	?resource a <otalex:IndiceOmbrotermico>.
+	?resource rdfs:label '1'.
+}

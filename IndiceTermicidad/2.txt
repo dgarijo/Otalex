@@ -1,0 +1,14 @@
+@prefix otalex: <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+DELETE{
+	?resource rdfs:label '2'
+}
+INSERT {
+	?resource rdfs:label 'Mesomediterráneo superior.'@es.
+	?resource rdfs:label 'Mesomediterráneo superior.'@pt
+}
+WHERE{
+	?resource a <otalex:IndiceTermicidad>.
+	?resource rdfs:label '2'.
+}
