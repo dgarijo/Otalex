@@ -1,0 +1,8 @@
+@prefix otalex: <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#> .
+
+INSERT {
+	?resource a otalex:UnidadLocalPaisaje.
+}
+WHERE{
+	?resource a <http://geo.linkeddata.es/ontology/Albufera>.
+}

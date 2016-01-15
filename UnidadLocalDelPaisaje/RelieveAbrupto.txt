@@ -1,0 +1,11 @@
+@prefix otalex: <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#> .
+
+DELETE{
+	?resource otalex:auxType 'Relevo abrupto'@pt.
+}
+INSERT {
+	?resource a otalex:RelieveAbrupto.
+}
+WHERE{
+	?resource otalex:auxType 'Relevo abrupto'@pt.
+}

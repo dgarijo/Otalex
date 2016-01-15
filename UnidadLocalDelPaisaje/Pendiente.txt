@@ -1,0 +1,11 @@
+@prefix otalex: <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#> .
+
+DELETE{
+	?resource otalex:auxType 'Zonas de encosta'@pt.
+}
+INSERT {
+	?resource a otalex:Pendiente.
+}
+WHERE{
+	?resource otalex:auxType 'Zonas de encosta'@pt.
+}
