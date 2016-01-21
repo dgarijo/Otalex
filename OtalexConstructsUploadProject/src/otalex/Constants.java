@@ -13,6 +13,6 @@ public class Constants {
     public static final String folderOfFilesToUpload = "C:\\Users\\dgarijo\\Desktop\\Otalex\\";
 //    public static final String folderOfFilesToUpload = "C:\\Users\\dgarijo\\Desktop\\OtalexTestUpload";
     public static final String repository = "jdbc:virtuoso://linkeddata3.dia.fi.upm.es:1114";
-    public static final String user = "dgarijo";
-    public static final String password = "dgarij0.1";
+    public static final String user = "yourusergoeshere";
+    public static final String password = "yourpassgoeshere";
 }
