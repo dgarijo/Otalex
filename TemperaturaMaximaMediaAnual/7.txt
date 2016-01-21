@@ -9,6 +9,6 @@ INSERT {
 	?resource rdfs:label '19-20 ºC.'@pt
 }
 WHERE{
-	?resource a <otalex:TemperaturaMaximaMediaAnual>.
+	?resource a otalex:TemperaturaMaximaMediaAnual.
 	?resource rdfs:label '7'.
 }

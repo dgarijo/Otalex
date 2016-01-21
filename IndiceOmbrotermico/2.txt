@@ -9,6 +9,6 @@ INSERT {
 	?resource rdfs:label 'Subúmido inferior.'@pt
 }
 WHERE{
-	?resource a <otalex:IndiceOmbrotermico>.
+	?resource a otalex:IndiceOmbrotermico.
 	?resource rdfs:label '2'.
 }

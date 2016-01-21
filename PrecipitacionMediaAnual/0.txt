@@ -9,6 +9,6 @@ INSERT {
 	?resource rdfs:label '< 500 mm.'@pt
 }
 WHERE{
-	?resource a <otalex:PrecipitacionMediaAnual>.
+	?resource a otalex:PrecipitacionMediaAnual.
 	?resource rdfs:label '0'.
 }

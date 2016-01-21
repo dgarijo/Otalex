@@ -9,6 +9,6 @@ INSERT {
 	?resource rdfs:label '< 300  mm.'@pt
 }
 WHERE{
-	?resource a <otalex:ETPVerano>.
+	?resource a otalex:ETPVerano.
 	?resource rdfs:label '1'.
 }

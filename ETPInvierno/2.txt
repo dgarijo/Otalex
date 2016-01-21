@@ -5,10 +5,10 @@ DELETE{
 	?resource rdfs:label '2'
 }
 INSERT {
-	?resource rdfs:label '>60-80  mm.'@es.
-	?resource rdfs:label '>60-80  mm.'@pt
+	?resource rdfs:label '60-80  mm.'@es.
+	?resource rdfs:label '60-80  mm.'@pt
 }
 WHERE{
-	?resource a <otalex:ETPInvierno>.
+	?resource a otalex:ETPInvierno.
 	?resource rdfs:label '2'.
 }

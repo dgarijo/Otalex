@@ -9,6 +9,6 @@ INSERT {
 	?resource rdfs:label 'Euhiperoceánico.'@pt
 }
 WHERE{
-	?resource a <otalex:IndiceContinentalidad>.
+	?resource a otalex:IndiceContinentalidad.
 	?resource rdfs:label '0'.
 }

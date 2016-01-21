@@ -9,6 +9,6 @@ INSERT {
 	?resource rdfs:label '125-140 mm.'@pt
 }
 WHERE{
-	?resource a <otalex:PrecipitacionMaxima24Horas>.
+	?resource a otalex:PrecipitacionMaxima24Horas.
 	?resource rdfs:label '5'.
 }

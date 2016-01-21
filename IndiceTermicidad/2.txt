@@ -9,6 +9,6 @@ INSERT {
 	?resource rdfs:label 'Mesomediterráneo superior.'@pt
 }
 WHERE{
-	?resource a <otalex:IndiceTermicidad>.
+	?resource a otalex:IndiceTermicidad.
 	?resource rdfs:label '2'.
 }
