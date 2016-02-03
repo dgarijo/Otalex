@@ -24,14 +24,14 @@ Add the next import in your own class:
 > import es.upm.oeg.FixedMultipleSerializationsOnGeosparqlGeometries.FixMultipleSerialization;
 
 Example code (for use the library):
-> List<String> wktGeometries = new ArrayList<String>();\
-> String toTest = "POLYGON((2 3),(4 5),(6 7))";\
-> wktGeometries.add(toTest);\
-> toTest = "POLYGON((2 1,5 6))";\
-> wktGeometries.add(toTest);\
-> toTest = "GeometryCollection(Polygon((2 4,   3 4)),Polygon((9 10,7 8)))";\
-> wktGeometries.add(toTest);\
-> String fixed = FixMultipleSerialization.getSerializationOfWKTGeometries(wktGeometries);\
+> List<String> wktGeometries = new ArrayList<String>();
+> String toTest = "POLYGON((2 3),(4 5),(6 7))";
+> wktGeometries.add(toTest);
+> toTest = "POLYGON((2 1,5 6))";
+> wktGeometries.add(toTest);
+> toTest = "GeometryCollection(Polygon((2 4,   3 4)),Polygon((9 10,7 8)))";
+> wktGeometries.add(toTest);
+> String fixed = FixMultipleSerialization.getSerializationOfWKTGeometries(wktGeometries);
 > System.out.println(fixed);
 
 The input param of function is a List<String> with all serialization (wkt) of a single geometry.
