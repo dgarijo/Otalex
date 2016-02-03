@@ -44,7 +44,7 @@ public class App {
 			return;
 		}
 		if (!file.canRead()) {
-			System.err.println("Can read file");
+			System.err.println("Can not read file");
 			return;
 		}
 		if (!file.isFile()) {
