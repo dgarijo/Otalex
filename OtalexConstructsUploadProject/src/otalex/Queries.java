@@ -55,6 +55,12 @@ public class Queries {
     public static final String getDeleteStatementsForType(String type){
         return "?resource otalex:auxType "+type+".\n";
     }
+    
+    //insert ?resource a ?type where ?resource rdfs:label ?label
+    //?a a ?c. ?a <http://www.w3.org/2000/01/rdf-schema#label> ?l} FILTER regex(?l, "Laguna ") 
+    public static final String getInsertStatementsForLabelRegExp(String label){
+        return "?resource a ?type.\n ?resource <http://www.w3.org/2000/01/rdf-schema#label> ?l. FILTER regex(?l, \""+label+"\")";
+    }
    
     
     //AMPL_TERM_ABS

@@ -22,14 +22,22 @@ public class LoadFilesInRepo {
            list = f.listFiles((File dir, String name) -> name.endsWith(".ttl"));
            QueryOperations q = new QueryOperations(Constants.user, Constants.password, Constants.repository);
            for (File file:list){
-               String graphName = file.getName().replace(".ttl", "").toUpperCase().replace("-", "_").replace(" ", "").trim();
+               String graphName = file.getName().replace(".ttl", "").replace("_fixed","").toUpperCase().replace("-", "_").replace(" ", "").trim();
 //               System.out.println(graphName);
                q.loadFileToRepositoryGraph(file.getPath(), graphName);
            }
        }
     }
+    public static void runSingleFile(String fileName){
+        File file = new File(Constants.folderOfFilesToUpload+File.separator+fileName);
+        QueryOperations q = new QueryOperations(Constants.user, Constants.password, Constants.repository);
+        String graphName = file.getName().replace(".ttl", "").replace("_fixed","").toUpperCase().replace("-", "_").replace(" ", "").trim();
+        q.loadFileToRepositoryGraph(file.getPath(), graphName);
+    }
     
     public static void main (String[] args){
-        LoadFilesInRepo.run();
+//        LoadFilesInRepo.run();
+        LoadFilesInRepo.runSingleFile("I2hojas50-etrs89_fixed.ttl");
+//        LoadFilesInRepo.runSingleFile("I_06_EBALSES_ETRS89H29_fixed.ttl");
     }
 }

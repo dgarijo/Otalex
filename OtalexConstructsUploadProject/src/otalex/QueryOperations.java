@@ -104,15 +104,16 @@ public class QueryOperations {
         request.exec();
     }
     
-//    public static void main (String[] args){
-//        QueryOperations q = new QueryOperations(Constants.user, Constants.password, Constants.repository);
-//        //q.loadFromFile("C:\\Users\\dgarijo\\Desktop\\Ampl_Term_Media_Anual.ttl", "AmplitudTermicaMediaAnual");
-//        q.deleteGraph("http://otalex.linkeddata.es/graph/AMPL_TERM_ABS");
-////        q.insertQuery("	?resource rdfs:label '<10 ºC.'@es.\n" +
-////"	?resource rdfs:label '<10 ºC.'@pt", "?resource a otalex:AmplitudTermicaMediaAnual.\n" +
-////"	?resource rdfs:label '2'.", "http://otalex.linkeddata.es/graph/AmplitudTermicaMediaAnual");
-////        q.performUpdateQuery("	?resource rdfs:label '<10 ºC.'@es.\n" +
-////"	?resource rdfs:label '<10 ºC.'@pt", "	?resource rdfs:label '2'.", "?resource a otalex:AmplitudTermicaMediaAnual.\n" +
-////"	?resource rdfs:label '2'.", "http://otalex.linkeddata.es/graph/AmplitudTermicaMediaAnual");
-//    }
+    public static void main (String[] args){
+        QueryOperations q = new QueryOperations(Constants.user, Constants.password, Constants.repository);
+        //q.loadFromFile("C:\\Users\\dgarijo\\Desktop\\Ampl_Term_Media_Anual.ttl", "AmplitudTermicaMediaAnual");
+        //q.deleteGraph("http://otalex.linkeddata.es/graph/I2HOJAS50_ETRS89");
+        q.deleteGraph("http://otalex.linkeddata.es/graph/I_06_EMBALSES_ETRS89H29");
+//        q.insertQuery("	?resource rdfs:label '<10 ºC.'@es.\n" +
+//"	?resource rdfs:label '<10 ºC.'@pt", "?resource a otalex:AmplitudTermicaMediaAnual.\n" +
+//"	?resource rdfs:label '2'.", "http://otalex.linkeddata.es/graph/AmplitudTermicaMediaAnual");
+//        q.performUpdateQuery("	?resource rdfs:label '<10 ºC.'@es.\n" +
+//"	?resource rdfs:label '<10 ºC.'@pt", "	?resource rdfs:label '2'.", "?resource a otalex:AmplitudTermicaMediaAnual.\n" +
+//"	?resource rdfs:label '2'.", "http://otalex.linkeddata.es/graph/AmplitudTermicaMediaAnual");
+    }
 }
