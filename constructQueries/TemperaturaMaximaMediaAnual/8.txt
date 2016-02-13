@@ -1,0 +1,14 @@
+@prefix otalex: <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+DELETE{
+	?resource rdfs:label '8'
+}
+INSERT {
+	?resource rdfs:label '20 - 21 ºC.'@es.
+	?resource rdfs:label '20 - 21 ºC.'@pt
+}
+WHERE{
+	?resource a otalex:TemperaturaMaximaMediaAnual.
+	?resource rdfs:label '8'.
+}

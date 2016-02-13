@@ -1,0 +1,11 @@
+@prefix otalex: <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#> .
+
+DELETE{
+	?resource otalex:auxType 'Xistos'@pt.
+}
+INSERT {
+	?resource a otalex:Pizarra.
+}
+WHERE{
+	?resource otalex:auxType 'Xistos'@pt.
+}

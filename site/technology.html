@@ -16,9 +16,7 @@
 			<a href="models.html"><span>Modelos</span></a>
 			<a class="selected" href="technology.html"><span>Tecnología</span></a>
 			<a href="sparql.html"><span>SPARQL</span></a>
-			<a href="browser_otalex.html"><span>V. OTALEX</span></a>
-			<a href="browser_ign.html"><span>V. IGN</span></a>
-			<a href="browser_google.html"><span>V. OSM</span></a>
+			<a href="browser_otalex.html"><span>Visualizador</span></a>
 		</p>
 	</div>
 	<div id="content-wrapper" class="columns-1-2">
@@ -40,21 +38,66 @@
 				</tr>
 				<tr id="column-center">
 					<td id="column-2" class="lfr-column seventy" valign="top">
-						<h1>R2O y ODEMapster</h1>
+						
+						<h1>Map4RDF</h1>
 						<p style="text-align: justify;">
-						R2O & ODEMapster es un marco integrado para la expresión formal, la evaluación,  verificación y explotación de correspondencias semánticas entre ontologías y bases de datos relacionales. El marco integrado está compuesto por:<br><br>
-						<img height="53" title="R2O" alt="R2O" src="images/r2o.png" style="margin: 0px 6px; float: left;">R2O, un lenguaje formal declarativo con expresividad suficiente como para representar situaciones de correspondencia complejas debidas al hecho de que se alinean dos modelos desarrollados y mantenidos de forma independiente y entre los que pueden darse disparidades de todo tipo.<br><br>
-						<img height="53" title="ODEMapster" alt="ODEMapster" src="images/odeampster.png" style="margin: 0px 6px; float: left;">ODEMapster, procesador que se encarga del proceso de upgrade o enriquecimiento semántico del contenido de la base de datos o mediante la extracción bajo demanda del contenido de la base de datos en respuesta a preguntas planteadas en términos de la ontología mediante un proceso de re-escritura de consultas.<br><br>
-						<p style="text-align: center;"> <img title="ODEMapster" alt="ODEMapster" src="images/odemapsterprocess.png"></p>
+						Recientemente, hemos visto un gran incremento en la cantidad de datos geoespaciales que están publicados
+						utilizando <a href="http://www.w3.org/RDF/">RDF</a> y <a href="http://www.w3.org/DesignIssues/LinkedData.html">los principios de Linked Data</a>.
+						Esfuerzos como el <a href="http://www.w3.org/2005/Incubator/geo/">W3C Geo XG</a>, y más recientemente la iniciativa
+						<a href="http://www.opengeospatial.org/projects/groups/geosparqlswg/">GeoSPARQL</a> están proporcionando los vocabularios necesarios para publicar este tipo de información en la Web de Datos.
+						map4rdf es un herramienta para explorar y visualizar conjuntos de datos RDF enriquecidos con información geométrica.
+						<br>
+						map4rdf es un software open source. Sólo configuralo para usar tu SPARQL endpoint y proporciona a tus usuarios
+						con una buen visualización en un mapa de tus datos. Los aspectos geoespaciales de los datos se pueden modelar
+						usando o el modelo de datos del W3C Geo XG o el modelo de datos propuesto por GeoLinked Data (.es).
+						<br>
+						Para descargarlo, utilice el siguiente <a href="http://code.google.com/p/map4rdf/downloads/list">enlace</a>.
+						<br>
+						Puede acceder a una demo en la siguiente <a href="http://geo.linkeddata.es/web/guest/visualizacion-beta">dirección</a> (utilizando un endpoint de GeoLinkedData).
+						<br>
+						Puede acceder a una demo en la siguiente <a href="http://dbpedia.linkeddata.es/map4rdf">dirección</a> (utilizando un endpoint de DBpedia).<br>
+						</p>
+						<h4>Acerca de map4rdf: </h4>	
+						<p style="text-align: justify;">										
+							- Interfaz de exploración facetada <br>
+							- Visualizacion geoespacial mediante Google Maps. <br>
+							- Visualización de geometría (LineStrings, Polygons, etc) cuando se utiliza el modelo <a href="http://geo.linkeddata.es/web/guest/modelos">GeoLinkedData</a>. <br>
+							- Visualización de datos estadísticos utilizando <a href="http://sw.joanneum.at/scovo/schema.html">SCOVO</a> <br>
+						<br>
+						Para consultar la información completa de map4rdf (instalación, configuración y uso), visite la página oficial
+						en el siguiente <a href="http://oegdev.dia.fi.upm.es/projects/map4rdf/">enlace</a>.
 						
 						</p>
-					</td>
+						<h1>Virtuoso</h1>
+						<p>
+						<a href="http://virtuoso.openlinksw.com/">Virtuoso</a> es un servidor de datos multimodelo para las iniciativas ágiles e individuales. 
+						Ofrece una solución independiente de plataforma sin rival para la gestión de datos, acceso e integración.<br>
+						La arquitectura única del servidor híbrido de Virtuoso le permite ofrecer la funcionalidad del servidor
+						tradicional dentro de una oferta de producto única que cubre las siguientes áreas:<br>
+							- Gestión de Datos Relacionales<br>
+							- Gestión de Datos RDF <br>
+							- Gestión de datos XML <br>
+							- Gestión de Contenidos de texto libre y de indexación completa de texto"Documento de servidor Web <br>
+							- Servidor de Linked Data <br>
+							- Servidor de aplicaciones web <br>
+						</p>
+						<h1>Pubby</h1>
+						<p>
+						<a href="http://www4.wiwiss.fu-berlin.de/pubby/">Pubby</a> se puede utilizar para añadir interfaces de Linked Data a SPARQL endpoints.
+						Gran parte de los datos de la Web Semántica reside dentro de las triples stores y sólo se puede acceder
+						mediante el envío de consultas SPARQL a un SPARQL endpoint. Es difícil conectar la información en estas triples
+						stores con otras fuentes de datos externas.
+						<br>
+						Pubby hace que sea fácil convertir un SPARQL endpoint en un servidor de Linked Data. Se
+						implementa como una aplicación web en Java.
+						</p>					
+					</td><!--
 					<td id="column-3" class="lfr-column thirty" valign="top">
 						<h1 style="text-align: center;">To be completed</h1>
 						<p style="text-align: justify;">
 						Esta iniciativa esté desarrollada por <b>Ontology Engineering Group (OEG)</b>
 						</p>
-					</td>
+					</td>-->
 				</tr>
 			</tbody>
 		</table>

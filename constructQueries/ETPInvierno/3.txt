@@ -1,0 +1,14 @@
+@prefix otalex: <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+DELETE{
+	?resource rdfs:label '3'
+}
+INSERT {
+	?resource rdfs:label '80-100 mm.'@es.
+	?resource rdfs:label '80-100 mm.'@pt
+}
+WHERE{
+	?resource a otalex:ETPInvierno.
+	?resource rdfs:label '3'.
+}

@@ -1,0 +1,11 @@
+@prefix otalex: <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#> .
+
+DELETE{
+	?resource otalex:auxType 'Quartzitos'@pt.
+}
+INSERT {
+	?resource a otalex:Cuarcita.
+}
+WHERE{
+	?resource otalex:auxType 'Quartzitos'@pt.
+}

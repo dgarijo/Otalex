@@ -1,0 +1,14 @@
+@prefix otalex: <http://vocab.linkeddata.es/datosabiertos/def/medio-ambiente/otalex#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+DELETE{
+	?resource rdfs:label '1'
+}
+INSERT {
+	?resource rdfs:label 'Subhúmedo seco.'@es.
+	?resource rdfs:label 'Sub-úmido seco.'@pt
+}
+WHERE{
+	?resource a otalex:IndiceAridez.
+	?resource rdfs:label '1'.
+}
