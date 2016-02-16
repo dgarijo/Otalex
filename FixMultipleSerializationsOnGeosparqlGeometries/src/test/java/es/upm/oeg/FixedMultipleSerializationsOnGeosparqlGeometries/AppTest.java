@@ -9,7 +9,7 @@ import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
 
-import es.upm.oeg.FixedMultipleSerializationsOnGeosparqlGeometries.FixMultipleSerialization;
+import es.upm.oeg.FixedMultipleSerializationsOnGeosparqlGeometries.FixMultipleSerializationSimpleGeo;;
 
 /**
  * Unit test for simple App.
@@ -49,7 +49,7 @@ public class AppTest
 		wktGeometries.add(toTest);
 		toTest = "  sss  GeometryCollection(Polygon((2 4,   3 4   )),Polygon((9 10,   7 8   )))()(( ^^WKTLiteral";
 		wktGeometries.add(toTest);
-		Assert.assertEquals("Test number 1 fail",FixMultipleSerialization.getSerializationOfWKTGeometries(wktGeometries),"MultiPolygon(((2 3),(4 5),(6 7)),((2 3,5 6)),((2 4,3 4)),((9 10,7 8)))");
+		Assert.assertEquals("Test number 1 fail",FixMultipleSerializationSimpleGeo.getSerializationOfWKTGeometries(wktGeometries),"MultiPolygon(((2 3),(4 5),(6 7)),((2 3,5 6)),((2 4,3 4)),((9 10,7 8)))");
 		wktGeometries.clear();
 
 		// TEST 2 Test with LineString
@@ -59,7 +59,7 @@ public class AppTest
 		wktGeometries.add(toTest);
 		toTest = "  sss  GeometryCollection(LineSTRING(2 4,   3 4   ),LineSTRING(10 11,   76 8   ))()(( ^^WKTLiteral";
 		wktGeometries.add(toTest);
-		Assert.assertEquals("Test number 2 fail",FixMultipleSerialization.getSerializationOfWKTGeometries(wktGeometries),"MultiLineString((2 3,4 5,6 7),(2 3,5 6),(2 4,3 4),(10 11,76 8))");
+		Assert.assertEquals("Test number 2 fail",FixMultipleSerializationSimpleGeo.getSerializationOfWKTGeometries(wktGeometries),"MultiLineString((2 3,4 5,6 7),(2 3,5 6),(2 4,3 4),(10 11,76 8))");
 		wktGeometries.clear();
 
 		// TEST 3 Test with Points
@@ -69,7 +69,7 @@ public class AppTest
 		wktGeometries.add(toTest);
 		toTest = "  sss  GeometryCollection(Point(2 4),POINT(10 9))()(( ^^WKTLiteral";
 		wktGeometries.add(toTest);
-		Assert.assertEquals("Test number 3 fail",FixMultipleSerialization.getSerializationOfWKTGeometries(wktGeometries),"MultiPoint((2 3,4 5,6 7),(2 20),(2 4),(10 9))");
+		Assert.assertEquals("Test number 3 fail",FixMultipleSerializationSimpleGeo.getSerializationOfWKTGeometries(wktGeometries),"MultiPoint((2 3,4 5,6 7),(2 20),(2 4),(10 9))");
 		wktGeometries.clear();
 
 		// TEST 4 Test with collection of different geometries
@@ -87,7 +87,7 @@ public class AppTest
 		wktGeometries.add(toTest);
 		toTest = "  sss  GeometryCollection(Polygon((2 4,   3 4   )),LineString(8989 848, 77 65), POint(54 4))()(( ^^WKTLiteral";
 		wktGeometries.add(toTest);
-		Assert.assertEquals("Test number 2 fail",FixMultipleSerialization.getSerializationOfWKTGeometries(wktGeometries),"GeometryCollection(POLYGON((2 3),(4 5),(6 7)),LiNeStRinG(2 3,4 5,6 7),POinT(2 3,4 5,6 7),MultiPolygon(((2 3),(4 5),(6 7)),((2 3,5 6)),((2 4,3 4)),((9 10,7 8))),MultiPoint((2 3,4 5,6 7),(2 20),(2 4),(10 9)),MultiLineString((2 3,4 5,6 7),(2 3,5 6),(2 4,3 4),(10 11,76 8)),Polygon((2 4,3 4)),LineString(8989 848,77 65),POint(54 4))");
+		Assert.assertEquals("Test number 2 fail",FixMultipleSerializationSimpleGeo.getSerializationOfWKTGeometries(wktGeometries),"GeometryCollection(POLYGON((2 3),(4 5),(6 7)),LiNeStRinG(2 3,4 5,6 7),POinT(2 3,4 5,6 7),MultiPolygon(((2 3),(4 5),(6 7)),((2 3,5 6)),((2 4,3 4)),((9 10,7 8))),MultiPoint((2 3,4 5,6 7),(2 20),(2 4),(10 9)),MultiLineString((2 3,4 5,6 7),(2 3,5 6),(2 4,3 4),(10 11,76 8)),Polygon((2 4,3 4)),LineString(8989 848,77 65),POint(54 4))");
 		wktGeometries.clear();
     }
 }
