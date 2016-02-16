@@ -54,7 +54,7 @@ java -Xmx2048m -Xms1024m -jar FixMultipleSerializationsOnGeosparqlGeometries-VER
 ```
 If you does not put second parameter default is simpleGeo.    
 simpleGeo parameter will do the union of all WKT serializations in the original geometry and remove original WKT serializations.  
-multipleGeo parameter will create 1 geometry for each WKT serialization. New geometry URI is created with "originalUri_NUMBER" URI(NUMBER is a sequential integer start by 0). All original properties (of initial geometry) is added to the new geometry except rdf:type and geosparql:asWKT. Old "?resource geosparql:hasGeometry <oldGeometry>" and "<oldgeometry> ?p ?o" will be removed.  
+multipleGeo parameter will create 1 geometry for each WKT serialization. New geometry URI is created with "originalUri_NUMBER" URI(NUMBER is a sequential integer start by 0). All original properties (of initial geometry) is added to the new geometry except rdf:type and geosparql:asWKT. Old "?resource geosparql:hasGeometry \<oldGeometry\>" and "\<oldgeometry\> ?p ?o" will be removed.  
 When the app finished, a FILE_fixed.ttl will be generated (in the same folder of input file).
 
 
