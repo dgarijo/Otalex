@@ -3,7 +3,7 @@ package es.upm.oeg.FixedMultipleSerializationsOnGeosparqlGeometries;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FixMultipleSerialization {
+public class FixMultipleSerializationSimpleGeo {
 	private static enum WKTTypes {
 		GEOMETRYCOLLECTION, MULTIPOLYGON, MULTIPOINT, MULTILINESTRING, LINESTRING, POLYGON, POINT
 		// The program need this order if you change program don't work
@@ -44,6 +44,27 @@ public class FixMultipleSerialization {
 			toReturn.append(")");
 		}
 		return toReturn.toString();
+	}
+	
+	public static String getRdfTypeOfWKT(String wkt){
+		switch (detectWKTType(wkt)) {
+		case GEOMETRYCOLLECTION:
+			return "http://www.opengis.net/ont/sf#GeometryCollection";
+		case LINESTRING:
+			return "http://www.opengis.net/ont/sf#LineString";
+		case POLYGON:
+			return "http://www.opengis.net/ont/sf#Polygon";
+		case POINT:
+			return "http://www.opengis.net/ont/sf#Point";
+		case MULTILINESTRING:
+			return "http://www.opengis.net/ont/sf#MultiLineString";
+		case MULTIPOLYGON:
+			return "http://www.opengis.net/ont/sf#MultiPolygon";
+		case MULTIPOINT:
+			return "http://www.opengis.net/ont/sf#MultiPoint";
+		default:
+			return null;
+		}
 	}
 
 	private static String getCollectionStringOfType(SimpleWKTTypes type) {
@@ -110,6 +131,18 @@ public class FixMultipleSerialization {
 			globalType = type;
 		}
 		return globalType;
+	}
+	
+	private static WKTTypes detectWKTType(String wkt) {
+		WKTTypes type = null;
+		String wktLowercase = wkt.toLowerCase();
+		for (WKTTypes toDetect : WKTTypes.values()) {
+			if(wktLowercase.contains(toDetect.name().toLowerCase())){
+				type = toDetect;
+				break;
+			}
+		}
+		return type;
 	}
 
 	private static List<String> getGeometriesOfGeometryCollection(

@@ -50,8 +50,11 @@ In this example the printed value is:
 ### Use as executable
 Go to target folder and exectute (VERSION and FILE.TTL need to be replaced):
 ```sh
-java -Xmx2048m -Xms1024m -jar FixMultipleSerializationsOnGeosparqlGeometries-VERSION-jar-with-dependencies.jar FILE.TTL
+java -Xmx2048m -Xms1024m -jar FixMultipleSerializationsOnGeosparqlGeometries-VERSION-jar-with-dependencies.jar FILE.TTL [-simpleGeo | -multipleGeo]
 ```
+If you does not put second parameter default is simpleGeo.
+simpleGeo parameter will do the union of all WKT serializations in the original geometry and remove original WKT serializations.
+multipleGeo parameter will create 1 geometry for each WKT serialization. New geometry URI is created with "originalUri_NUMBER" URI.(NUMBER is a sequential integer start by 0). All original properties (of initial geometry) is added to the new geometry except rdf:type and geosparql:asWKT. Old "?resource geosparql:hasGeometry ?oldGeometry" and "?geometry ?p ?o" will be removed.  
 When the app finished, a FILE_fixed.ttl will be generated (in the same folder of input file).
 
 
