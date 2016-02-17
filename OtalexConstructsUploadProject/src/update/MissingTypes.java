@@ -15,6 +15,167 @@ import otalex.QueryOperations;
  * @author dgarijo
  */
 public class MissingTypes {
+    //small method to fix the other one in case errors are detected
+/*    public static void run2(){
+       QueryOperations q = new QueryOperations(Constants.user, Constants.password, Constants.repository);
+       //EMBALSE
+       String[] graphNames = {"http://otalex.linkeddata.es/graph/I8SUPERFICIESACUATICAS_ETRS89_H29","http://otalex.linkeddata.es/graph/I_06_EMBALSES_ETRS89H29"};
+        for(String graph:graphNames){
+        q.performDeleteQuery(Queries.getInsertStatementsForType("<http://geo.linkeddata.es/ontology/Embalse>"),
+                "?resource a <http://geo.linkeddata.es/ontology/Embalse>", 
+                graph);
+        }
+        //RIO, RÍO
+        graphNames = new String[]{"http://otalex.linkeddata.es/graph/PT_RIOS",
+            "http://otalex.linkeddata.es/graph/SUPERFICIES_AQUATICAS_PT",
+            "http://otalex.linkeddata.es/graph/CURSOS_DE_AGUA_PT",
+            "http://otalex.linkeddata.es/graph/RIOS_ETRS89_H29",
+            "http://otalex.linkeddata.es/graph/DIRECTIVA_HABITATS",
+            "http://otalex.linkeddata.es/graph/I8CURSOSDEAGUA_ETRS89"};
+        for(String graph:graphNames){
+        q.performDeleteQuery(Queries.getInsertStatementsForType("<http://geo.linkeddata.es/ontology/Rio>"),
+                "?resource a <http://geo.linkeddata.es/ontology/Rio>", 
+                graph);
+            
+        }
+        graphNames = new String[]{"http://otalex.linkeddata.es/graph/PT_RIOS",
+            "http://otalex.linkeddata.es/graph/I_06_EMBALSES_ETRS89H29",
+            "http://otalex.linkeddata.es/graph/I_06_RIOS_ETRS89H29",
+            "http://otalex.linkeddata.es/graph/I8CURSOSDEAGUA_ETRS89"};
+        for(String graph:graphNames){
+        q.performDeleteQuery(Queries.getInsertStatementsForType("<http://geo.linkeddata.es/ontology/Rio>"),
+                "?resource a <http://geo.linkeddata.es/ontology/Rio>", 
+                graph);
+            
+        }
+        //ALBUFEIRA
+        graphNames = new String[]{"http://otalex.linkeddata.es/graph/I8SUPERFICIESACUATICAS_ETRS89_H29",
+            "http://otalex.linkeddata.es/graph/I_06_EMBALSES_ETRS89H29",
+            "http://otalex.linkeddata.es/graph/SUPERFICIES_AQUATICAS_PT",
+            "http://otalex.linkeddata.es/graph/UNIDADES_PAISAGEM_OTALEX_ETRS"};
+        for(String graph:graphNames){
+        q.performDeleteQuery(Queries.getInsertStatementsForType("<http://geo.linkeddata.es/ontology/Albufera>"),
+                "?resource a <http://geo.linkeddata.es/ontology/Albufera>", 
+                graph);
+            
+        }
+        //LAGOA 
+        graphNames = new String[]{"http://otalex.linkeddata.es/graph/AREAS_PROTEGIDAS_ETRS89_H29",
+            "http://otalex.linkeddata.es/graph/CLC_06_OTALEX_C_ETRS89_H29",
+            "http://otalex.linkeddata.es/graph/CLC_00_OTALEX_C_ETRS89_H29",
+            "http://otalex.linkeddata.es/graph/I8CURSOSDEAGUA_ETRS89",
+            "http://otalex.linkeddata.es/graph/PT_EMBALSES",
+            "http://otalex.linkeddata.es/graph/RAMSAR_PT_ETRS89_H29_REC",
+            "http://otalex.linkeddata.es/graph/SUPERFICIES_AQUATICAS_PT"
+        };
+        for(String graph:graphNames){
+        q.performDeleteQuery(Queries.getInsertStatementsForType("<http://geo.linkeddata.es/ontology/Laguna>"),
+                "?resource a <http://geo.linkeddata.es/ontology/Laguna>", 
+                graph);  
+        }
+        
+        //LAGUNA
+        graphNames = new String[]{"http://otalex.linkeddata.es/graph/I_06_EMBALSES_ETRS89H29"};
+        for(String graph:graphNames){
+        q.performDeleteQuery(Queries.getInsertStatementsForType("<http://geo.linkeddata.es/ontology/Laguna>"),
+                "?resource a <http://geo.linkeddata.es/ontology/Laguna>", 
+                graph);  
+        }
+        
+        //ARROYO
+        graphNames = new String[]{"http://otalex.linkeddata.es/graph/PT_RIOS",
+            "http://otalex.linkeddata.es/graph/I_06_EMBALSES_ETRS89H29",
+            "http://otalex.linkeddata.es/graph/I_06_RIOS_ETRS89H29",
+            "http://otalex.linkeddata.es/graph/RIOS_ETRS89_H29"
+        };
+        for(String graph:graphNames){
+        q.performDeleteQuery(Queries.getInsertStatementsForType("<http://geo.linkeddata.es/ontology/Arroyo>"),
+                "?resource a <http://geo.linkeddata.es/ontology/Arroyo>", 
+                graph);  
+        }
+        //RIBEIRA
+        graphNames = new String[]{"http://otalex.linkeddata.es/graph/PT_RIOS",
+            "http://otalex.linkeddata.es/graph/CURSOS_DE_AGUA_PT",
+            "http://otalex.linkeddata.es/graph/RIOS_ETRS89_H29",
+            "http://otalex.linkeddata.es/graph/I8CURSOSDEAGUA_ETRS89",
+            "http://otalex.linkeddata.es/graph/RAMSAR_PT_ETRS89_H29_REC",
+            "http://otalex.linkeddata.es/graph/I_06_RIOS_ETRS89H29"
+        };
+        for(String graph:graphNames){
+        q.performDeleteQuery(Queries.getInsertStatementsForType("<http://geo.linkeddata.es/ontology/Rivera>"),
+                "?resource a <http://geo.linkeddata.es/ontology/Rivera>", 
+                graph);  
+        }
+        
+        //RIVERA
+        graphNames = new String[]{"http://otalex.linkeddata.es/graph/PT_RIOS",
+            "http://otalex.linkeddata.es/graph/I_06_EMBALSES_ETRS89H29",
+            "http://otalex.linkeddata.es/graph/RIOS_ETRS89_H29",
+            "http://otalex.linkeddata.es/graph/I_06_RIOS_ETRS89H29"
+        };
+        for(String graph:graphNames){
+        q.performDeleteQuery(Queries.getInsertStatementsForType("<http://geo.linkeddata.es/ontology/Rivera>"),
+                Queries.getInsertStatementsForLabelRegExp("Rivera "), 
+                graph);  
+        }
+        
+        //REGATO
+        
+        graphNames = new String[]{"http://otalex.linkeddata.es/graph/PT_RIOS",
+            "http://otalex.linkeddata.es/graph/RIOS_ETRS89_H29",
+            "http://otalex.linkeddata.es/graph/I_06_RIOS_ETRS89H29"
+        };
+        for(String graph:graphNames){
+        q.performDeleteQuery(Queries.getInsertStatementsForType("<http://geo.linkeddata.es/ontology/Regato>"),
+                "?resource a <http://geo.linkeddata.es/ontology/Regato>", 
+                graph);  
+        }
+        
+        //GARGANTA
+        graphNames = new String[]{"http://otalex.linkeddata.es/graph/AREAS_PROTEGIDAS_ETRS89_H29",
+            "http://otalex.linkeddata.es/graph/I_06_EMBALSES_ETRS89H29",
+            "http://otalex.linkeddata.es/graph/I_06_RIOS_ETRS89H29",
+            "http://otalex.linkeddata.es/graph/RIOS_ETRS89_H29"
+        };
+        for(String graph:graphNames){
+        q.performDeleteQuery(Queries.getInsertStatementsForType("<http://geo.linkeddata.es/ontology/Garganta>"),
+                "?resource a <http://geo.linkeddata.es/ontology/Garganta>", 
+                graph);  
+        }
+        
+        //BARRANCO
+        graphNames = new String[]{"http://otalex.linkeddata.es/graph/PT_RIOS",
+            "http://otalex.linkeddata.es/graph/I_06_RIOS_ETRS89H29",
+            "http://otalex.linkeddata.es/graph/RIOS_ETRS89_H29"
+        };
+        for(String graph:graphNames){
+        q.performDeleteQuery(Queries.getInsertStatementsForType("<http://geo.linkeddata.es/ontology/Barranco>"),
+                "?resource a <http://geo.linkeddata.es/ontology/Barranco>", 
+                graph);
+        }
+        
+        //REGAJO
+        graphNames = new String[]{"http://otalex.linkeddata.es/graph/I_06_RIOS_ETRS89H29"
+        };
+        for(String graph:graphNames){
+        q.performDeleteQuery(Queries.getInsertStatementsForType("<http://geo.linkeddata.es/ontology/Regajo>"),
+                "?resource a <http://geo.linkeddata.es/ontology/Regajo>", 
+                graph);
+        }
+        
+        //PAUL
+        graphNames = new String[]{"http://otalex.linkeddata.es/graph/AREAS_PROTEGIDAS_ETRS89_H29",
+            "http://otalex.linkeddata.es/graph/RAMSAR_PT_ETRS89_H29_REC",
+            "http://otalex.linkeddata.es/graph/DIRECTIVA_HABITATS"
+        };
+        for(String graph:graphNames){
+        q.performDeleteQuery(Queries.getInsertStatementsForType("<http://geo.linkeddata.es/ontology/Paul>"),
+                "?resource a <http://geo.linkeddata.es/ontology/Paul>", 
+                graph);
+        }
+            
+    }*/ 
+    
     public static void run(){
         QueryOperations q = new QueryOperations(Constants.user, Constants.password, Constants.repository);
         /**

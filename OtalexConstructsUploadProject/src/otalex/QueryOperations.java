@@ -75,7 +75,8 @@ public class QueryOperations {
     
     public void performDeleteQuery(String statementsToDelete, String whereClause, String graphName){
         String query = Queries.prefixOtalex+"\n"+Queries.prefixRDFS+"\n"+
-                "DELETE from <"+graphName+">{\n" +statementsToDelete+
+                "WITH GRAPH <"+graphName+">\n"
+                + "DELETE{\n" +statementsToDelete+
                        "}\n" +
                         "WHERE{\n" +whereClause+                
                         "}";
@@ -85,7 +86,8 @@ public class QueryOperations {
     
     public void performInsertQuery(String statementsToInsert, String whereClause, String graphName){
         String query = Queries.prefixOtalex+"\n"+Queries.prefixRDFS+"\n"+
-                "INSERT into <"+graphName+">{\n" +statementsToInsert+
+                "WITH GRAPH <"+graphName+">\n"
+                + "INSERT{\n" +statementsToInsert+
                        "}\n" +
                         "WHERE{\n" +whereClause+                
                         "}";
